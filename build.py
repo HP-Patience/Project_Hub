@@ -60,6 +60,8 @@ def load() -> dict:
             datetime.strptime(p["updated"], "%Y-%m-%d")
         except ValueError:
             fail(f"项目 {p['name']} 的 updated 不是 YYYY-MM-DD")
+        if p["owner"] not in (data.get("meta", {}).get("accounts") or []):
+            fail(f"项目 {p['name']} 的 owner {p['owner']} 不在 meta.accounts 白名单内")
         override = p.get("statusOverride")
         if override and override not in STATUS_LABEL:
             fail(f"项目 {p['name']} 的 statusOverride 非法：{override}")
@@ -126,7 +128,7 @@ def build_readme(data: dict, today: date, now: str) -> None:
 
 # 项目中枢 · Project Hub
 
-把散落在多个账号与本地目录里的项目，按用途归成一条可读的索引。
+把 HP-Patience 账号与本地工作区里的项目，按用途归成一条可读的索引。
 
 <img src="assets/preview.png" alt="项目中枢页面预览：深色界面，顶部为统计与分类筛选，下方为精选项目卡片" width="100%">
 
