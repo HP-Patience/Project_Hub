@@ -46,8 +46,8 @@
     },
     {
       "id": "archive",
-      "name": "归档与本地",
-      "en": "Archive & Local",
+      "name": "归档与资料",
+      "en": "Archive",
       "desc": "长期归档的 vault、配置备份与参考资料，不作为活跃项目维护。"
     }
   ],
@@ -739,14 +739,16 @@
       "name": "Project_Data_Archive",
       "owner": "HP-Patience",
       "category": "archive",
-      "tagline": "项目数据与附件的本地归档仓，仅本地保留。",
-      "desc": "集中存放不便入库的素材、导出与备份文件，未推送到远程。",
+      "tagline": "项目数据与实验资料的私有归档仓。",
+      "desc": "整理 EEG、眼动、皮电、图数据与机器学习等研究数据，按项目归档，不对外公开。",
       "stack": [
+        "Jupyter Notebook",
         "Archive"
       ],
       "tags": [
         "归档",
-        "本地"
+        "研究数据",
+        "私有"
       ],
       "updated": "2026-06-25",
       "visibility": "private"

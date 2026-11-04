@@ -291,7 +291,7 @@ document.getElementById("stats").innerHTML = [
 /* featured */
 document.getElementById("f-grid").innerHTML = PROJECTS.filter(p=>p.featured).slice(0,6).map((p,i)=>{
   const u = urlOf(p);
-  const link = u ? `<a class="go" href="${u}" target="_blank" rel="noopener">GitHub ↗</a>` : `<span class="go">仅本地</span>`;
+  const link = u ? `<a class="go" href="${u}" target="_blank" rel="noopener">GitHub ↗</a>` : `<span class="go">${p.visibility === "private" ? "私有仓库" : "未发布"}</span>`;
   return `<article class="f-card">
     <div class="num">${String(i+1).padStart(2,"0")}</div>
     <h3>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(p.name)}</a>`:esc(p.name)}</h3>

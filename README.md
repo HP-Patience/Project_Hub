@@ -24,7 +24,7 @@
 | 网站与前端 | 5 | 个人主页、内容工作台与前端练习，多为可直接访问的线上作品。 |
 | 学习与笔记 | 8 | 课程、教材与研究方向的结构化记录，强调可复习、可追踪。 |
 | 开发与基础设施 | 6 | 编辑器、桥接层、脚本与配置：支撑上面所有项目的底座。 |
-| 归档与本地 | 4 | 长期归档的 vault、配置备份与参考资料，不作为活跃项目维护。 |
+| 归档与资料 | 4 | 长期归档的 vault、配置备份与参考资料，不作为活跃项目维护。 |
 
 状态说明：**活跃** 14 天内推送 · **维护中** 90 天内 · **暂缓** 超过 90 天 · **上游衍生** 基于他人项目二次开发 · **已归档** 停止维护。标 **私有** 的仓库不公开，索引中不提供链接。
 
@@ -114,7 +114,7 @@
 | [github-readme-stats](https://github.com/HP-Patience/github-readme-stats) | **README 统计卡片的自建实例。** 上游项目的个人部署副本，用于在主页 README 中生成动态统计图，保持数据自持。 | JavaScript · Vercel | 上游衍生 | 2026-07-31 |
 | [api-enhanced](https://github.com/HP-Patience/api-enhanced) | **网易云音乐 API 的增强版服务。** 在上游基础上补齐接口与兼容层，为本地音乐类项目提供统一数据源。 | JavaScript · Node.js | 上游衍生 | 2026-06-09 |
 
-### 归档与本地 · Archive & Local
+### 归档与资料 · Archive
 
 长期归档的 vault、配置备份与参考资料，不作为活跃项目维护。
 
@@ -123,7 +123,7 @@
 | folia-major | **Folia 音乐播放器的本地副本（上游参考）。** 歌词与播放体验做得较完整的上游项目，本地保留用于界面与交互参考。 | TypeScript | 维护中 · 私有 | 2026-10-05 |
 | obsidian-config | **Obsidian 配置快照：插件、主题与工作区布局。** 只备份 .obsidian 目录，不含笔记与附件，用于快速还原编辑环境。 | JSON · Obsidian | 维护中 · 私有 | 2026-09-01 |
 | obsidian-kaoyan | **考研向 Obsidian vault，含笔记与附件。** 545 MB / 10,422 文件的主 vault，笔记与附件混存，尚未完成瘦身与 LFS 迁移。 | Markdown · Obsidian | 维护中 · 私有 | 2026-08-31 |
-| Project_Data_Archive | **项目数据与附件的本地归档仓，仅本地保留。** 集中存放不便入库的素材、导出与备份文件，未推送到远程。 | Archive | 暂缓 · 私有 | 2026-06-25 |
+| Project_Data_Archive | **项目数据与实验资料的私有归档仓。** 整理 EEG、眼动、皮电、图数据与机器学习等研究数据，按项目归档，不对外公开。 | Jupyter Notebook · Archive | 暂缓 · 私有 | 2026-06-25 |
 
 ---
 
@@ -146,4 +146,4 @@ Project_Hub/
 
 字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `statusOverride`（`fork` / `archived` / `local`）。状态默认由 `updated` 推算。
 
-<sub>生成时间 2026-11-04 21:43 · 数据来源 GitHub REST API 与本地工作区</sub>
+<sub>生成时间 2026-11-04 21:44 · 数据来源 GitHub REST API 与本地工作区</sub>
