@@ -8,7 +8,7 @@
 
 [**在线浏览 →**](https://hp-patience.github.io/Project_Hub/) · [个人主页](https://github.com/HP-Patience)
 
-<sub>42 个项目 · 7 个分类 · 9 个近 14 天活跃 · 最近更新 2026-11-04</sub>
+<sub>43 个项目 · 7 个分类 · 9 个近 14 天活跃 · 最近更新 2026-11-04</sub>
 
 </div>
 
@@ -20,7 +20,7 @@
 | --- | --- | --- |
 | AI 与智能体 | 8 | 把模型能力落成可用工具：Agent 工作流、技能库、检索与生成。 |
 | 效率与时间 | 4 | 任务、时间、知识的管理系统，多数以本地数据与 Markdown 为底座。 |
-| 创作与媒体 | 11 | 图像、声音、视频与游戏：从素材检索到成片输出的完整链路。 |
+| 创作与媒体 | 12 | 图像、声音、视频与游戏：从素材检索到成片输出的完整链路。 |
 | 网站与前端 | 4 | 个人主页、内容工作台与前端练习，多为可直接访问的线上作品。 |
 | 学习与笔记 | 6 | 课程、教材与研究方向的结构化记录，强调可复习、可追踪。 |
 | 开发与基础设施 | 5 | 编辑器、桥接层、脚本与配置：支撑上面所有项目的底座。 |
@@ -64,6 +64,7 @@
 | [ink-live2d](https://github.com/HP-Patience/ink-live2d) | **墨像：黑白肖像与键鼠桌宠共用一套 Live2D 制作管线。** InkPortrait 与 InkKeys 两个模型合并维护，包含分层工具、绑定导出与运行验证流程。 | Python · Live2D | 活跃 | 2026-11-02 |
 | [LocalMediaSearch](https://github.com/HP-Patience/LocalMediaSearch) | **镜库：用一句话或一张参考图，找到本机里的素材。** 基于 EmbeddingGemma 2 的本地多模态检索，覆盖视频、图片、音频、文本与代码，定位后可导出。 | Python · Embedding · Windows | 维护中 | 2026-10-12 |
 | [MusiCue](https://github.com/HP-Patience/MusiCue) | **听得懂心情的 AI 电台，按场景生成渐进式歌单。** 用自然语言描述需求，模型结合上下文推荐歌曲并持续记忆品味，形成个人 DJ。 | TypeScript · React · LLM | 维护中 | 2026-08-29 |
+| ink-bongocat-live2d | **BongoCat 桌宠运行时：C + SDL3 + OpenGL 的原生窗口。** 跟随键鼠输入做互动的轻量桌宠应用，自带演示模型；自定义模型资产（Ruotengwu，后改名 InkKeys）已迁至 ink-live2d，本仓保留应用本体。 | C · SDL3 · OpenGL | 仅本地 | 2026-11-03 |
 | video-parser | **本地视频资料工作台：下载、抽帧、字幕、转写与归档。** 链接解析下载后串起封面抽帧、B 站字幕、Whisper CUDA 批量转写与 AI 画面分析，提供 React 界面与 Python CLI。 | Python · React · Whisper | 仅本地 | 2026-10-29 |
 | [voicebox](https://github.com/HP-Patience/voicebox) | **本地 AI 语音工作室：克隆、合成、听写与 Agent 接口。** 把声音克隆、多语言语音合成与快捷键听写收进一个桌面应用，并提供给 Agent 调用的语音接口。 | TypeScript · TTS | 上游衍生 | 2026-09-19 |
 | [openscreen](https://github.com/HP-Patience/openscreen) | **免费做演示视频：无订阅、无水印，可商用。** 屏幕录制与镜头编排工具，面向产品演示与操作讲解，作为 Screen Studio 的替代。 | TypeScript · Electron | 上游衍生 | 2026-09-19 |
@@ -140,4 +141,4 @@ Project_Hub/
 
 字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `statusOverride`（`fork` / `archived` / `local`）。状态默认由 `updated` 推算。
 
-<sub>生成时间 2026-11-04 20:42 · 数据来源 GitHub REST API 与本地工作区</sub>
+<sub>生成时间 2026-11-04 20:46 · 数据来源 GitHub REST API 与本地工作区</sub>

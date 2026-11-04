@@ -302,6 +302,25 @@
       "updated": "2026-11-02"
     },
     {
+      "name": "ink-bongocat-live2d",
+      "owner": "HP-Patience",
+      "category": "creative",
+      "tagline": "BongoCat 桌宠运行时：C + SDL3 + OpenGL 的原生窗口。",
+      "desc": "跟随键鼠输入做互动的轻量桌宠应用，自带演示模型；自定义模型资产（Ruotengwu，后改名 InkKeys）已迁至 ink-live2d，本仓保留应用本体。",
+      "stack": [
+        "C",
+        "SDL3",
+        "OpenGL"
+      ],
+      "tags": [
+        "桌宠",
+        "原生",
+        "运行时"
+      ],
+      "statusOverride": "local",
+      "updated": "2026-11-03"
+    },
+    {
       "name": "LocalMediaSearch",
       "owner": "HP-Patience",
       "category": "creative",
