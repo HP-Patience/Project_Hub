@@ -8,7 +8,7 @@
 
 [**在线浏览 →**](https://hp-patience.github.io/Project_Hub/) · [个人主页](https://github.com/HP-Patience)
 
-<sub>43 个项目 · 7 个分类 · 9 个近 14 天活跃 · 最近更新 2026-11-04</sub>
+<sub>42 个项目 · 7 个分类 · 9 个近 14 天活跃 · 最近更新 2026-11-04</sub>
 
 </div>
 
@@ -21,7 +21,7 @@
 | AI 与智能体 | 8 | 把模型能力落成可用工具：Agent 工作流、技能库、检索与生成。 |
 | 效率与时间 | 4 | 任务、时间、知识的管理系统，多数以本地数据与 Markdown 为底座。 |
 | 创作与媒体 | 11 | 图像、声音、视频与游戏：从素材检索到成片输出的完整链路。 |
-| 网站与前端 | 5 | 个人主页、内容工作台与前端练习，多为可直接访问的线上作品。 |
+| 网站与前端 | 4 | 个人主页、内容工作台与前端练习，多为可直接访问的线上作品。 |
 | 学习与笔记 | 6 | 课程、教材与研究方向的结构化记录，强调可复习、可追踪。 |
 | 开发与基础设施 | 5 | 编辑器、桥接层、脚本与配置：支撑上面所有项目的底座。 |
 | 归档与本地 | 4 | 远程已删除、仅本地保留或上游参考版本，不作为活跃项目维护。 |
@@ -78,7 +78,6 @@
 
 | 项目 | 说明 | 技术栈 | 状态 | 最近更新 |
 | --- | --- | --- | --- | --- |
-| resume-website | **中英双语的响应式简历与作品展示页。** 静态模板，支持语言切换与移动端适配，附 PDF 版本下载。 | HTML · CSS | 仅本地 | 2026-11-04 |
 | frontend-awesome-collection | **优秀前端作品的收藏与复刻实践。** 收录网站、交互组件与视觉动效，附设计拆解笔记与可运行复刻版本。 | HTML · CSS · JavaScript | 仅本地 | 2026-11-04 |
 | [HP-Patience](https://github.com/HP-Patience/HP-Patience) | **GitHub 个人主页：AI 产品、学习系统与个人工具。** Profile 仓库，用 README 组织项目索引与自我介绍。 | Python · Markdown | 维护中 | 2026-10-12 |
 | [OpenStock](https://github.com/HP-Patience/OpenStock) | **开源美股行情分析应用，Next.js + shadcn/ui。** 接入 Finnhub 行情与 TradingView 图表，作为付费行情终端的替代方案。 | TypeScript · Next.js | 上游衍生 | 2026-10-06 |
@@ -141,4 +140,4 @@ Project_Hub/
 
 字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `statusOverride`（`fork` / `archived` / `local`）。状态默认由 `updated` 推算。
 
-<sub>生成时间 2026-11-04 20:31 · 数据来源 GitHub REST API 与本地工作区</sub>
+<sub>生成时间 2026-11-04 20:42 · 数据来源 GitHub REST API 与本地工作区</sub>

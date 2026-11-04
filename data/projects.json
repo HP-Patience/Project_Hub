@@ -513,23 +513,6 @@
       "updated": "2026-08-29"
     },
     {
-      "name": "resume-website",
-      "owner": "HP-Patience",
-      "category": "web",
-      "tagline": "中英双语的响应式简历与作品展示页。",
-      "desc": "静态模板，支持语言切换与移动端适配，附 PDF 版本下载。",
-      "stack": [
-        "HTML",
-        "CSS"
-      ],
-      "tags": [
-        "简历",
-        "i18n"
-      ],
-      "statusOverride": "local",
-      "updated": "2026-11-04"
-    },
-    {
       "name": "frontend-awesome-collection",
       "owner": "HP-Patience",
       "category": "web",
