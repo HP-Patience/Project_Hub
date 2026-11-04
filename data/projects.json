@@ -4,7 +4,7 @@
     "accounts": [
       "HP-Patience"
     ],
-    "source": "GitHub REST API（HP-Patience）+ 本地工作区 E:/_Projects/HP_Github_PJ",
+    "source": "GitHub REST API（HP-Patience 公开 33 + 私有 15）+ 本地工作区 E:/_Projects/HP_Github_PJ",
     "updated": "2026-11-04"
   },
   "categories": [
@@ -48,7 +48,7 @@
       "id": "archive",
       "name": "归档与本地",
       "en": "Archive & Local",
-      "desc": "远程已删除、仅本地保留或上游参考版本，不作为活跃项目维护。"
+      "desc": "长期归档的 vault、配置备份与参考资料，不作为活跃项目维护。"
     }
   ],
   "projects": [
@@ -261,8 +261,8 @@
         "逆向分析",
         "科研助手"
       ],
-      "statusOverride": "local",
-      "updated": "2026-11-04"
+      "updated": "2026-10-25",
+      "visibility": "private"
     },
     {
       "name": "gallery",
@@ -317,8 +317,8 @@
         "原生",
         "运行时"
       ],
-      "statusOverride": "local",
-      "updated": "2026-11-03"
+      "updated": "2026-11-02",
+      "visibility": "private"
     },
     {
       "name": "LocalMediaSearch",
@@ -479,8 +479,8 @@
         "字幕",
         "归档"
       ],
-      "statusOverride": "local",
-      "updated": "2026-10-29"
+      "updated": "2026-10-28",
+      "visibility": "private"
     },
     {
       "name": "HP-Patience",
@@ -547,8 +547,8 @@
         "复刻",
         "动效"
       ],
-      "statusOverride": "local",
-      "updated": "2026-11-04"
+      "updated": "2026-11-04",
+      "visibility": "private"
     },
     {
       "name": "English_Context",
@@ -645,8 +645,8 @@
         "概率统计",
         "教材"
       ],
-      "statusOverride": "local",
-      "updated": "2026-11-04"
+      "updated": "2026-10-25",
+      "visibility": "private"
     },
     {
       "name": "Tools",
@@ -696,8 +696,8 @@
         "MCP",
         "Agent"
       ],
-      "statusOverride": "local",
-      "updated": "2026-11-04"
+      "updated": "2026-11-04",
+      "visibility": "private"
     },
     {
       "name": "github-readme-stats",
@@ -748,8 +748,8 @@
         "归档",
         "本地"
       ],
-      "statusOverride": "local",
-      "updated": "2026-11-04"
+      "updated": "2026-06-25",
+      "visibility": "private"
     },
     {
       "name": "obsidian-kaoyan",
@@ -766,8 +766,8 @@
         "vault",
         "本地"
       ],
-      "statusOverride": "local",
-      "updated": "2026-11-04"
+      "updated": "2026-08-31",
+      "visibility": "private"
     },
     {
       "name": "obsidian-config",
@@ -784,8 +784,8 @@
         "备份",
         "本地"
       ],
-      "statusOverride": "local",
-      "updated": "2026-11-04"
+      "updated": "2026-09-01",
+      "visibility": "private"
     },
     {
       "name": "folia-major",
@@ -800,8 +800,96 @@
         "上游参考",
         "音乐"
       ],
-      "statusOverride": "local",
-      "updated": "2026-10-05"
+      "updated": "2026-10-05",
+      "visibility": "private"
+    },
+    {
+      "name": "localtypeless",
+      "owner": "HP-Patience",
+      "category": "productivity",
+      "tagline": "轻触右 Alt 说话，松开即上屏。",
+      "desc": "Windows 本地语音输入：录音转写后交给本地语言模型整理、翻译或改写，全流程不依赖云端。",
+      "stack": [
+        "Python",
+        "Whisper"
+      ],
+      "tags": [
+        "语音输入",
+        "本地推理",
+        "Windows"
+      ],
+      "visibility": "private",
+      "updated": "2026-11-04"
+    },
+    {
+      "name": "blog-firefly",
+      "owner": "HP-Patience",
+      "category": "web",
+      "tagline": "Astro + Firefly 主题的个人博客源码。",
+      "desc": "记录技术实践、学习笔记与日常，内容与构建分离，静态产物走 CI 部署。",
+      "stack": [
+        "Astro",
+        "TypeScript"
+      ],
+      "tags": [
+        "博客",
+        "Astro"
+      ],
+      "visibility": "private",
+      "updated": "2026-11-02"
+    },
+    {
+      "name": "undergrad-thesis-crw",
+      "owner": "HP-Patience",
+      "category": "learning",
+      "tagline": "LoRA 微调的中文金融情感分类本科论文。",
+      "desc": "在 FinFE 数据集上比较传统机器学习、BERT/RoBERTa 与 Qwen/GLM 微调的效果与成本。",
+      "stack": [
+        "Python",
+        "PyTorch",
+        "LoRA"
+      ],
+      "tags": [
+        "论文",
+        "金融情感",
+        "微调"
+      ],
+      "visibility": "private",
+      "updated": "2026-11-01"
+    },
+    {
+      "name": "mit-math-study",
+      "owner": "HP-Patience",
+      "category": "learning",
+      "tagline": "MIT 数学课程的导航与进度同步。",
+      "desc": "面向中文学习者整理微积分、线性代数、概率统计的课程索引与学习记录。",
+      "stack": [
+        "Markdown"
+      ],
+      "tags": [
+        "数学",
+        "课程"
+      ],
+      "visibility": "private",
+      "updated": "2026-09-18"
+    },
+    {
+      "name": "cc-connect",
+      "owner": "HP-Patience",
+      "category": "infra",
+      "tagline": "把本地 AI 编程助手接到聊天平台。",
+      "desc": "个人部署分支：连接本地 Agent 与 Telegram 等平台，包含回复修复与 Codex 桌面任务兼容改进。",
+      "stack": [
+        "Go",
+        "MCP"
+      ],
+      "tags": [
+        "桥接",
+        "IM",
+        "Agent"
+      ],
+      "visibility": "private",
+      "updated": "2026-09-16"
     }
   ]
 }

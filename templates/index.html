@@ -128,6 +128,9 @@
   .status[data-s="fork"]{color:var(--violet)}
   .status[data-s="archived"],.status[data-s="local"]{color:var(--gray)}
   .owner{color:var(--dim);letter-spacing:.02em}
+  .vis{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:var(--amber);
+    border:1px solid rgba(240,184,102,.32);background:rgba(240,184,102,.07);
+    border-radius:4px;padding:1px 5px;margin-left:auto}
   .card h3{margin:0;font-size:17px;font-weight:600;letter-spacing:.005em;line-height:1.35}
   .card h3 a{background-image:linear-gradient(var(--accent),var(--accent));background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .25s}
   .card:hover h3 a{background-size:100% 1px}
@@ -197,7 +200,7 @@
   <div class="wrap">
     <div class="eyebrow">Project Hub <span class="sep"></span> Celyn <span class="sep"></span> __YEAR__</div>
     <h1>项目中枢<em>。</em></h1>
-    <p class="lede">把 HP-Patience 账号与本地工作区里的项目，按用途归成一条可读的索引。每个条目都指向真实仓库，状态与更新时间取自 GitHub API。</p>
+    <p class="lede">把 HP-Patience 账号下的公开与私有仓库按用途归成一条可读的索引。每个条目都指向真实仓库，状态与更新时间取自 GitHub API。</p>
     <div class="stats" id="stats"></div>
   </div>
 </header>
@@ -269,17 +272,19 @@ const STATUS_LABEL = {
   fork:"上游衍生", archived:"已归档", local:"仅本地"
 };
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const urlOf = p => p.statusOverride === "local" ? "" : `https://github.com/${p.owner}/${p.name}`;
+const urlOf = p => (p.visibility === "private" || p.statusOverride === "local")
+  ? "" : `https://github.com/${p.owner}/${p.name}`;
 
 PROJECTS.forEach(p => { p._s = statusOf(p); });
 
 /* stats */
 const latest = PROJECTS.map(p=>p.updated).sort().pop();
-const activeCount = PROJECTS.filter(p=>p._s==="active").length;
+const pubCount = PROJECTS.filter(p=>p.visibility !== "private").length;
+const privCount = PROJECTS.length - pubCount;
 document.getElementById("stats").innerHTML = [
   ["项目总数", PROJECTS.length],
-  ["活跃（14 天内）", activeCount],
-  ["分类", CATS.length],
+  ["公开仓库", pubCount],
+  ["私有仓库", privCount],
   ["最近更新", latest.slice(5)]
 ].map(([k,v])=>`<div class="stat"><b>${v}</b><span>${k}</span></div>`).join("");
 
@@ -305,11 +310,14 @@ sectionsEl.innerHTML = CATS.map((c,ci)=>{
     const u = urlOf(p);
     const name = u ? `<a href="${u}" target="_blank" rel="noopener">${esc(p.name)}</a>` : esc(p.name);
     const owner = p.owner !== DATA.meta.owner ? `<span class="owner">@${esc(p.owner)}</span>` : "";
-    const foot = u ? `<a class="go" href="${u}" target="_blank" rel="noopener">GitHub ↗</a>` : `<span class="go">未发布</span>`;
+    const foot = u
+      ? `<a class="go" href="${u}" target="_blank" rel="noopener">GitHub ↗</a>`
+      : `<span class="go">${p.visibility === "private" ? "私有仓库" : "未发布"}</span>`;
     const home = p.homepage ? `<a class="go" href="${esc(p.homepage)}" target="_blank" rel="noopener" style="margin-right:10px">在线 ↗</a>` : "";
     return `<article class="card" data-search="${esc((p.name+" "+p.tagline+" "+p.stack.join(" ")+" "+p.tags.join(" ")+" "+p.owner).toLowerCase())}">
       <div class="card-top">
         <span class="status" data-s="${p._s}"><i></i>${STATUS_LABEL[p._s]||p._s}</span>
+        ${p.visibility === "private" ? '<span class="vis">私有</span>' : ""}
         ${owner}
       </div>
       <h3>${name}</h3>

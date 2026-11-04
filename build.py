@@ -108,12 +108,15 @@ def build_readme(data: dict, today: date, now: str) -> None:
         rows.append("| --- | --- | --- | --- | --- |")
         for p in items:
             name = p["name"]
-            if p.get("statusOverride") != "local":
+            if p.get("statusOverride") != "local" and p.get("visibility") != "private":
                 name = f"[{name}]({REPO_URL.format(owner=p['owner'], name=p['name'])})"
             stack = " · ".join(p["stack"]) if p["stack"] else "—"
+            state = STATUS_LABEL[status_of(p, today)]
+            if p.get("visibility") == "private":
+                state += " · 私有"
             rows.append(
                 f"| {name} | **{p['tagline']}** {p['desc']} | {stack} | "
-                f"{STATUS_LABEL[status_of(p, today)]} | {p['updated']} |"
+                f"{state} | {p['updated']} |"
             )
 
     overview = ["| 分类 | 数量 | 说明 |", "| --- | --- | --- |"]
@@ -121,7 +124,8 @@ def build_readme(data: dict, today: date, now: str) -> None:
         n = sum(1 for p in projects if p["category"] == c["id"])
         overview.append(f"| {c['name']} | {n} | {c['desc']} |")
 
-    active = sum(1 for p in projects if status_of(p, today) == "active")
+    priv = sum(1 for p in projects if p.get("visibility") == "private")
+    pub = len(projects) - priv
     latest = max(p["updated"] for p in projects)
 
     body = f"""<div align="center">
@@ -134,7 +138,7 @@ def build_readme(data: dict, today: date, now: str) -> None:
 
 [**在线浏览 →**]({SITE_URL}) · [个人主页](https://github.com/{owner})
 
-<sub>{len(projects)} 个项目 · {len(cats)} 个分类 · {active} 个近 14 天活跃 · 最近更新 {latest}</sub>
+<sub>{len(projects)} 个项目 · {pub} 个公开 · {priv} 个私有 · {len(cats)} 个分类 · 最近更新 {latest}</sub>
 
 </div>
 
@@ -144,7 +148,7 @@ def build_readme(data: dict, today: date, now: str) -> None:
 
 {chr(10).join(overview)}
 
-状态说明：**活跃** 14 天内推送 · **维护中** 90 天内 · **暂缓** 超过 90 天 · **上游衍生** 基于他人项目二次开发 · **已归档** 停止维护 · **仅本地** 未发布到远程。
+状态说明：**活跃** 14 天内推送 · **维护中** 90 天内 · **暂缓** 超过 90 天 · **上游衍生** 基于他人项目二次开发 · **已归档** 停止维护。标 **私有** 的仓库不公开，索引中不提供链接。
 {chr(10).join(rows)}
 
 ---
