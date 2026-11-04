@@ -37,7 +37,7 @@
 | [DeepTutor](https://github.com/HP-Patience/DeepTutor) | **结合知识库检索的个性化 AI 学习助手。** 在 HKUDS/DeepTutor 基础上做个人化调整：答疑、课程学习与知识理解，支持文档入库检索。 | Python · RAG · Agent | 上游衍生 | 2026-11-01 |
 | [Skills](https://github.com/HP-Patience/Skills) | **面向 AI 编程助手的个人 Agent Skills 合集。** 覆盖学习、写作、规划、需求理解与开发工作流，按可安装的 skill 结构组织。 | Python · Markdown | 活跃 | 2026-10-26 |
 | [MathModelAgent](https://github.com/HP-Patience/MathModelAgent) | **数学建模 Agent：从读题到生成可提交的完整论文。** 问题分析、建模求解、代码执行与论文撰写串成一条链路，支持知识库与人机协作。 | Python · Agent | 上游衍生 | 2026-10-25 |
-| genius-mathmodelagent | **对 Modex-MH-Agent 科研助手的逆向分析与结构备份。** 整理后端服务、工作流编排、技能系统与桌面端结构，作为自建科研 Agent 的参考实现。 | Python · Agent | 活跃 · 私有 | 2026-10-25 |
+| genius-mathmodelagent | （描述已隐藏） | Python · Agent | 活跃 · 私有 | 2026-10-25 |
 | [tongflow](https://github.com/HP-Patience/tongflow) | **多模态 AI 工作流：用节点编排文本、图像、语音与视频。** 可视化画布组织生成流程，节点间可组合模型与参数，适合把一次性脚本固化成可复用管线。 | TypeScript · React | 上游衍生 | 2026-10-11 |
 | [tongflow-api-xai](https://github.com/HP-Patience/tongflow-api-xai) | **TongFlow 的 xAI Grok 节点插件。** 通过 OpenAI 兼容接口接入聊天、视觉与图像模型，支持逐节点选择模型。 | Python · xAI | 上游衍生 | 2026-10-09 |
 | [GithubStarsManager](https://github.com/HP-Patience/GithubStarsManager) | **把 GitHub Star 变成可检索、可分类的个人资料库。** 自动同步星标仓库，用 AI 生成摘要与分类，支持语义搜索与 Release 追踪。 | TypeScript · LLM | 上游衍生 | 2026-09-07 |
@@ -146,4 +146,4 @@ Project_Hub/
 
 字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `statusOverride`（`fork` / `archived` / `local`）。状态默认由 `updated` 推算。
 
-<sub>生成时间 2026-11-04 21:44 · 数据来源 GitHub REST API 与本地工作区</sub>
+<sub>生成时间 2026-11-04 23:42 · 数据来源 GitHub REST API 与本地工作区</sub>

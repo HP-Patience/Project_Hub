@@ -251,18 +251,19 @@
       "name": "genius-mathmodelagent",
       "owner": "HP-Patience",
       "category": "ai",
-      "tagline": "对 Modex-MH-Agent 科研助手的逆向分析与结构备份。",
-      "desc": "整理后端服务、工作流编排、技能系统与桌面端结构，作为自建科研 Agent 的参考实现。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Python",
         "Agent"
       ],
       "tags": [
-        "逆向分析",
-        "科研助手"
+        "科研助手",
+        "结构整理"
       ],
       "updated": "2026-10-25",
-      "visibility": "private"
+      "visibility": "private",
+      "masked": true
     },
     {
       "name": "gallery",

@@ -135,6 +135,11 @@
   .card h3 a{background-image:linear-gradient(var(--accent),var(--accent));background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .25s}
   .card:hover h3 a{background-size:100% 1px}
   .tagline{margin:0;color:#c3c8d1;font-size:13px;line-height:1.6}
+  .tagline.masked{display:flex;align-items:center;gap:8px;min-height:21px}
+  .tagline.masked .bar{display:inline-block;height:11px;width:56%;border-radius:3px;
+    background:linear-gradient(90deg,rgba(255,255,255,.13),rgba(255,255,255,.055))}
+  .tagline.masked em{font-style:normal;font-family:var(--mono);font-size:9.5px;
+    letter-spacing:.08em;color:var(--dim)}
   .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
   .stack span{
     font-family:var(--mono);font-size:10px;color:var(--muted);
@@ -295,7 +300,7 @@ document.getElementById("f-grid").innerHTML = PROJECTS.filter(p=>p.featured).sli
   return `<article class="f-card">
     <div class="num">${String(i+1).padStart(2,"0")}</div>
     <h3>${u?`<a href="${u}" target="_blank" rel="noopener">${esc(p.name)}</a>`:esc(p.name)}</h3>
-    <p>${esc(p.tagline)}</p>
+    <p>${p.masked ? "描述已隐藏" : esc(p.tagline)}</p>
     <div class="f-foot"><span>${esc(p.stack.slice(0,2).join(" · "))}</span>${link}</div>
   </article>`;
 }).join("");
@@ -321,7 +326,7 @@ sectionsEl.innerHTML = CATS.map((c,ci)=>{
         ${owner}
       </div>
       <h3>${name}</h3>
-      <p class="tagline">${esc(p.tagline)}</p>
+      <p class="tagline${p.masked ? " masked" : ""}">${p.masked ? '<span class="bar"></span><em>描述已隐藏</em>' : esc(p.tagline)}</p>
       <div class="stack">${p.stack.map(s=>`<span>${esc(s)}</span>`).join("")}</div>
       <div class="card-foot"><span>更新 ${p.updated.slice(5)}</span><span>${home}${foot}</span></div>
     </article>`;

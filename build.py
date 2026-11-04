@@ -114,9 +114,9 @@ def build_readme(data: dict, today: date, now: str) -> None:
             state = STATUS_LABEL[status_of(p, today)]
             if p.get("visibility") == "private":
                 state += " · 私有"
+            body = "（描述已隐藏）" if p.get("masked") else f"**{p['tagline']}** {p['desc']}"
             rows.append(
-                f"| {name} | **{p['tagline']}** {p['desc']} | {stack} | "
-                f"{state} | {p['updated']} |"
+                f"| {name} | {body} | {stack} | {state} | {p['updated']} |"
             )
 
     overview = ["| 分类 | 数量 | 说明 |", "| --- | --- | --- |"]
