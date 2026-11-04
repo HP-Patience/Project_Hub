@@ -128,6 +128,8 @@ def build_readme(data: dict, today: date, now: str) -> None:
 
 把散落在多个账号与本地目录里的项目，按用途归成一条可读的索引。
 
+<img src="assets/preview.png" alt="项目中枢页面预览：深色界面，顶部为统计与分类筛选，下方为精选项目卡片" width="100%">
+
 [**在线浏览 →**]({SITE_URL}) · [个人主页](https://github.com/{owner})
 
 <sub>{len(projects)} 个项目 · {len(cats)} 个分类 · {active} 个近 14 天活跃 · 最近更新 {latest}</sub>

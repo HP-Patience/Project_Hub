@@ -4,6 +4,8 @@
 
 把散落在多个账号与本地目录里的项目，按用途归成一条可读的索引。
 
+<img src="assets/preview.png" alt="项目中枢页面预览：深色界面，顶部为统计与分类筛选，下方为精选项目卡片" width="100%">
+
 [**在线浏览 →**](https://hp-patience.github.io/Project_Hub/) · [个人主页](https://github.com/HP-Patience)
 
 <sub>65 个项目 · 8 个分类 · 15 个近 14 天活跃 · 最近更新 2026-11-04</sub>
@@ -169,4 +171,4 @@ Project_Hub/
 
 字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `statusOverride`（`fork` / `archived` / `local`）。状态默认由 `updated` 推算。
 
-<sub>生成时间 2026-11-04 20:12 · 数据来源 GitHub REST API 与本地工作区</sub>
+<sub>生成时间 2026-11-04 20:16 · 数据来源 GitHub REST API 与本地工作区</sub>
