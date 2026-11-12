@@ -8,7 +8,7 @@
 
 [**在线浏览 →**](https://hp-patience.github.io/Project_Hub/) · [个人主页](https://github.com/HP-Patience)
 
-<sub>53 个项目 · 37 个公开 · 16 个私有 · 7 个分类 · 最近更新 2026-11-12</sub>
+<sub>51 个项目 · 35 个公开 · 16 个私有 · 7 个分类 · 最近更新 2026-11-12</sub>
 
 </div>
 
@@ -20,10 +20,10 @@
 | --- | --- | --- |
 | AI 与智能体 | 9 | 把模型能力落成可用工具：Agent 工作流、技能库、检索与生成。 |
 | 效率与时间 | 6 | 任务、时间、知识的管理系统，多数以本地数据与 Markdown 为底座。 |
-| 创作与媒体 | 12 | 图像、声音、视频与游戏：从素材检索到成片输出的完整链路。 |
+| 创作与媒体 | 11 | 图像、声音、视频与游戏：从素材检索到成片输出的完整链路。 |
 | 网站与前端 | 5 | 个人主页、内容工作台与前端练习，多为可直接访问的线上作品。 |
 | 学习与笔记 | 8 | 课程、教材与研究方向的结构化记录，强调可复习、可追踪。 |
-| 开发与基础设施 | 6 | 编辑器、桥接层、脚本与配置：支撑上面所有项目的底座。 |
+| 开发与基础设施 | 5 | 编辑器、桥接层、脚本与配置：支撑上面所有项目的底座。 |
 | 归档与资料 | 7 | 长期归档的 vault、配置备份与参考资料，不作为活跃项目维护。 |
 
 状态说明：**活跃** 14 天内推送 · **维护中** 90 天内 · **暂缓** 超过 90 天 · **上游衍生** 基于他人项目二次开发 · **已并入** 代码已迁入其他仓库 · **已归档** 停止维护。标 **私有** 的仓库不公开，索引中不提供链接，描述一律显示为「描述已隐藏」。
@@ -68,7 +68,6 @@
 | [LocalMediaSearch](https://github.com/HP-Patience/LocalMediaSearch) | **镜库：用一句话或一张参考图，找到本机里的素材。** 基于 EmbeddingGemma 2 的本地多模态检索，覆盖视频、图片、音频、文本与代码，定位后可导出。 | Python · Embedding · Windows | 维护中 | 2026-10-12 |
 | [MusiCue](https://github.com/HP-Patience/MusiCue) | **听得懂心情的 AI 电台，按场景生成渐进式歌单。** 用自然语言描述需求，模型结合上下文推荐歌曲并持续记忆品味，形成个人 DJ。 | TypeScript · React · LLM | 维护中 | 2026-08-29 |
 | [video-parser](https://github.com/HP-Patience/video-parser) | **本地视频资料工作台：下载、抽帧、字幕、转写与归档。** 链接解析下载后串起封面抽帧、B 站字幕、Whisper CUDA 批量转写与 AI 画面分析，提供 React 界面与 Python CLI。 | Python · React · Whisper | 活跃 | 2026-11-08 |
-| [ember-covenant-sanctuary](https://github.com/HP-Patience/Tools/tree/main/ember-covenant-sanctuary) | **《烬契圣堂》：高对比像素风俯视角动作肉鸽原型。** 自由瞄准射击、净焰脉冲与双面契印构成核心循环，圣堂地图按房间推进。已并入 `Tools`，原独立仓库已删除。 | JavaScript · Canvas | 已并入 | 2026-11-07 |
 | ink-bongocat-live2d | （描述已隐藏） | C · SDL3 · OpenGL | 活跃 · 私有 | 2026-11-02 |
 | [voicebox](https://github.com/HP-Patience/voicebox) | **本地 AI 语音工作室：克隆、合成、听写与 Agent 接口。** 把声音克隆、多语言语音合成与快捷键听写收进一个桌面应用，并提供给 Agent 调用的语音接口。 | TypeScript · TTS | 上游衍生 | 2026-09-19 |
 | [openscreen](https://github.com/HP-Patience/openscreen) | **免费做演示视频：无订阅、无水印，可商用。** 屏幕录制与镜头编排工具，面向产品演示与操作讲解，作为 Screen Studio 的替代。 | TypeScript · Electron | 上游衍生 | 2026-09-19 |
@@ -109,12 +108,33 @@
 
 | 项目 | 说明 | 技术栈 | 状态 | 最近更新 |
 | --- | --- | --- | --- | --- |
-| [Tools](https://github.com/HP-Patience/Tools) | **日常 AI 小工具集合，全部可独立运行。** 包含 LLM 接口连通性与响应速度测试、AI 绘图等本地小工具，按单文件组织便于随手启动。 | HTML · Python | 活跃 | 2026-11-12 |
-| [dotfiles](https://github.com/HP-Patience/Tools/tree/main/dotfiles) | **Linux 服务器的 Zsh 配置与一键安装脚本。** Powerlevel10k 主题、常用插件与安装脚本，保证新机器十分钟内可用。已并入 `Tools`，原独立仓库已删除。 | Shell · Zsh | 已并入 | 2026-11-12 |
+| [Tools](https://github.com/HP-Patience/Tools) | **十几个自用小工具收进一个仓库，各自独立运行。** 每个工具保留自己的 README 与运行方式：静态页、Python 脚本、Node 服务、Go 后端与浏览器游戏原型并存，共享位置而不共享依赖。点开二级视图可以逐个查看。 内含 13 个[子项目](https://github.com/HP-Patience/Tools)，见下表 | Python · JavaScript · Go | 活跃 | 2026-11-12 |
 | open_shuncode | （描述已隐藏） | TypeScript · Code-OSS · MCP | 活跃 · 私有 | 2026-11-04 |
 | cc-connect | （描述已隐藏） | Go · MCP | 维护中 · 私有 | 2026-09-16 |
 | [github-readme-stats](https://github.com/HP-Patience/github-readme-stats) | **README 统计卡片的自建实例。** 上游项目的个人部署副本，用于在主页 README 中生成动态统计图，保持数据自持。 | JavaScript · Vercel | 上游衍生 | 2026-07-31 |
 | [api-enhanced](https://github.com/HP-Patience/api-enhanced) | **网易云音乐 API 的增强版服务。** 在上游基础上补齐接口与兼容层，为本地音乐类项目提供统一数据源。 | JavaScript · Node.js | 上游衍生 | 2026-06-09 |
+
+<details>
+<summary><b>Tools 的子项目（13 个）</b></summary>
+
+| 子项目 | 说明 | 技术栈 | 最近更新 |
+| --- | --- | --- | --- |
+| [dotfiles](https://github.com/HP-Patience/Tools/tree/main/dotfiles) | Linux 服务器的 Zsh 配置与一键安装脚本。 | Shell · Zsh | 2026-11-12 |
+| [ember-covenant-sanctuary](https://github.com/HP-Patience/Tools/tree/main/ember-covenant-sanctuary) | 《烬契圣堂》：高对比像素风俯视角动作肉鸽原型。 | Phaser 3 · JavaScript | 2026-11-07 |
+| [Dreamcore-Style-Transfer](https://github.com/HP-Patience/Tools/tree/main/Dreamcore-Style-Transfer) | 用 Pillow 做 10 种「核」风格的像素级处理。 | Python · Pillow | 2026-11-04 |
+| [Penrose-Staircase](https://github.com/HP-Patience/Tools/tree/main/Penrose-Staircase) | 生成第 n 阶彭罗斯不可能阶梯。 | Python | 2026-11-04 |
+| [tencent-server-seckill](https://github.com/HP-Patience/Tools/tree/main/tencent-server-seckill) | 腾讯云服务器抢购的本地控制台与命令行。 | Python · Playwright | 2026-11-04 |
+| [mailbox-reader](https://github.com/HP-Patience/Tools/tree/main/mailbox-reader) | 批量导入邮箱，按需读取收件箱。 | Python · Graph API | 2026-11-04 |
+| [QQBookExporter](https://github.com/HP-Patience/Tools/tree/main/QQBookExporter) | 导出在线章节为 Markdown / TXT，再打包 EPUB / PDF。 | Node.js | 2026-11-04 |
+| [Taskleaf-Kanban](https://github.com/HP-Patience/Tools/tree/main/Taskleaf-Kanban) | 四列任务看板，JSON 文件持久化。 | JavaScript · Vite · Express | 2026-11-04 |
+| [ai-subscription-manager](https://github.com/HP-Patience/Tools/tree/main/ai-subscription-manager) | AI 订阅客户、续费与利润记录，到期邮件提醒。 | React · FastAPI · SQLite | 2026-11-04 |
+| [danew_card_cdk](https://github.com/HP-Patience/Tools/tree/main/danew_card_cdk) | CDK 卡密兑换与自动开通。 | Go · Vue | 2026-11-04 |
+| [knowledge-map](https://github.com/HP-Patience/Tools/tree/main/knowledge-map) | Agent 整理、浏览器只读回看的个人知识地图。 | TypeScript · Vite | 2026-11-04 |
+| [GPT图像工坊](https://github.com/HP-Patience/Tools/tree/main/GPT%E5%9B%BE%E5%83%8F%E5%B7%A5%E5%9D%8A) | 输入提示词生成图片，支持参考图编辑与本地标注。 | Python · FastAPI | 2026-08-17 |
+| [LLM试金石](https://github.com/HP-Patience/Tools/tree/main/LLM%E8%AF%95%E9%87%91%E7%9F%B3) | 批量验证 OpenAI 兼容接口的模型连通性与耗时。 | HTML · JavaScript | 2026-07-22 |
+
+</details>
+
 
 ### 归档与资料 · Archive
 
@@ -149,6 +169,6 @@ Project_Hub/
 2. 运行 `python build.py` 重新生成页面与 README。
 3. 提交并推送，Pages 自动更新。
 
-字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `repoUrl`（原仓库已删除或并入时，指向实际位置）`masked`（描述已隐藏）`statusOverride`（`fork` / `archived` / `merged` / `local`）。状态默认由 `updated` 推算。`visibility` 为 `private` 的项目必须设 `masked: true` 且清空 `tagline` / `desc`，页面上只显示「描述已隐藏」。
+字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `repoUrl`（原仓库已删除或并入时，指向实际位置）`masked`（描述已隐藏）`statusOverride`（`fork` / `archived` / `merged` / `local`）`subprojects`（仓库内子项目，每项含 `name` `tagline` `stack` `updated`，页面上以二级视图展示，不再单列一级条目）。状态默认由 `updated` 推算。`visibility` 为 `private` 的项目必须设 `masked: true` 且清空 `tagline` / `desc`，页面上只显示「描述已隐藏」。
 
-<sub>生成时间 2026-11-12 13:09 · 数据来源 GitHub REST API 与本地工作区</sub>
+<sub>生成时间 2026-11-12 14:18 · 数据来源 GitHub REST API 与本地工作区</sub>

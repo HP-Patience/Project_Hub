@@ -68,6 +68,22 @@ def load() -> dict:
             fail(f"项目 {p['name']} 的 statusOverride 非法：{override}")
         if p.get("visibility") == "private" and not p.get("masked"):
             fail(f"私有项目 {p['name']} 必须设 masked: true，并清空 tagline/desc，避免描述外泄")
+        subs = p.get("subprojects")
+        if subs is not None:
+            if not isinstance(subs, list) or not subs:
+                fail(f"项目 {p['name']} 的 subprojects 必须是非空数组")
+            sub_seen = set()
+            for s in subs:
+                for key in ("name", "tagline", "stack", "updated"):
+                    if key not in s:
+                        fail(f"项目 {p['name']} 的子项目 {s.get('name', '?')} 缺少字段 {key}")
+                if s["name"].lower() in sub_seen:
+                    fail(f"项目 {p['name']} 的子项目重名：{s['name']}")
+                sub_seen.add(s["name"].lower())
+                try:
+                    datetime.strptime(s["updated"], "%Y-%m-%d")
+                except ValueError:
+                    fail(f"子项目 {s['name']} 的 updated 不是 YYYY-MM-DD")
     return data
 
 
@@ -94,6 +110,27 @@ def build_html(data: dict, today: date, now: str) -> None:
     OUT_HTML.write_text(html, encoding="utf-8")
 
 
+def _readme_subprojects(p: dict, href: str) -> str:
+    """把 subprojects 展开成 README 里的二级列表（折叠块）。"""
+    from urllib.parse import quote
+
+    tree = href.rstrip("/") + "/tree/main/"
+    lines = [
+        "",
+        f"<details>",
+        f"<summary><b>{p['name']} 的子项目（{len(p['subprojects'])} 个）</b></summary>",
+        "",
+        "| 子项目 | 说明 | 技术栈 | 最近更新 |",
+        "| --- | --- | --- | --- |",
+    ]
+    for s in sorted(p["subprojects"], key=lambda s: s["updated"], reverse=True):
+        link = f"[{s['name']}]({tree}{quote(s['name'])})"
+        stack = " · ".join(s["stack"]) if s["stack"] else "—"
+        lines.append(f"| {link} | {s['tagline']} | {stack} | {s['updated']} |")
+    lines += ["", "</details>", ""]
+    return "\n".join(lines)
+
+
 def build_readme(data: dict, today: date, now: str) -> None:
     cats = data["categories"]
     projects = data["projects"]
@@ -109,19 +146,27 @@ def build_readme(data: dict, today: date, now: str) -> None:
         rows.append(f"\n### {c['name']} · {c['en']}\n\n{c['desc']}\n")
         rows.append("| 项目 | 说明 | 技术栈 | 状态 | 最近更新 |")
         rows.append("| --- | --- | --- | --- | --- |")
+        subs_blocks = []
         for p in items:
             name = p["name"]
+            href = p.get("repoUrl") or REPO_URL.format(owner=p["owner"], name=p["name"])
             if p.get("statusOverride") != "local" and p.get("visibility") != "private":
-                href = p.get("repoUrl") or REPO_URL.format(owner=p["owner"], name=p["name"])
                 name = f"[{name}]({href})"
             stack = " · ".join(p["stack"]) if p["stack"] else "—"
             state = STATUS_LABEL[status_of(p, today)]
             if p.get("visibility") == "private":
                 state += " · 私有"
             body = "（描述已隐藏）" if p.get("masked") else f"**{p['tagline']}** {p['desc']}"
+            if p.get("subprojects"):
+                sub = "子项目"
+                if p.get("visibility") != "private":
+                    sub = f"[子项目]({href})"
+                body += f" 内含 {len(p['subprojects'])} 个{sub}，见下表"
+                subs_blocks.append(_readme_subprojects(p, href))
             rows.append(
                 f"| {name} | {body} | {stack} | {state} | {p['updated']} |"
             )
+        rows.extend(subs_blocks)
 
     overview = ["| 分类 | 数量 | 说明 |", "| --- | --- | --- |"]
     for c in cats:
@@ -174,7 +219,7 @@ Project_Hub/
 2. 运行 `python build.py` 重新生成页面与 README。
 3. 提交并推送，Pages 自动更新。
 
-字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `repoUrl`（原仓库已删除或并入时，指向实际位置）`masked`（描述已隐藏）`statusOverride`（`fork` / `archived` / `merged` / `local`）。状态默认由 `updated` 推算。`visibility` 为 `private` 的项目必须设 `masked: true` 且清空 `tagline` / `desc`，页面上只显示「描述已隐藏」。
+字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `repoUrl`（原仓库已删除或并入时，指向实际位置）`masked`（描述已隐藏）`statusOverride`（`fork` / `archived` / `merged` / `local`）`subprojects`（仓库内子项目，每项含 `name` `tagline` `stack` `updated`，页面上以二级视图展示，不再单列一级条目）。状态默认由 `updated` 推算。`visibility` 为 `private` 的项目必须设 `masked: true` 且清空 `tagline` / `desc`，页面上只显示「描述已隐藏」。
 
 <sub>生成时间 {now} · 数据来源 GitHub REST API 与本地工作区</sub>
 """
