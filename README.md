@@ -8,7 +8,7 @@
 
 [**在线浏览 →**](https://hp-patience.github.io/Project_Hub/) · [个人主页](https://github.com/HP-Patience)
 
-<sub>51 个项目 · 35 个公开 · 16 个私有 · 7 个分类 · 最近更新 2026-11-12</sub>
+<sub>51 个项目 · 34 个公开 · 17 个私有 · 7 个分类 · 最近更新 2026-11-12</sub>
 
 </div>
 
@@ -108,33 +108,11 @@
 
 | 项目 | 说明 | 技术栈 | 状态 | 最近更新 |
 | --- | --- | --- | --- | --- |
-| [Tools](https://github.com/HP-Patience/Tools) | **十几个自用小工具收进一个仓库，各自独立运行。** 每个工具保留自己的 README 与运行方式：静态页、Python 脚本、Node 服务、Go 后端与浏览器游戏原型并存，共享位置而不共享依赖。 内含 13 个[子项目](https://github.com/HP-Patience/Tools)，见下表 | Python · JavaScript · Go | 活跃 | 2026-11-12 |
+| Tools | （描述已隐藏） | Python · JavaScript · Go | 活跃 · 私有 | 2026-11-12 |
 | open_shuncode | （描述已隐藏） | TypeScript · Code-OSS · MCP | 活跃 · 私有 | 2026-11-04 |
 | cc-connect | （描述已隐藏） | Go · MCP | 维护中 · 私有 | 2026-09-16 |
 | [github-readme-stats](https://github.com/HP-Patience/github-readme-stats) | **README 统计卡片的自建实例。** 上游项目的个人部署副本，用于在主页 README 中生成动态统计图，保持数据自持。 | JavaScript · Vercel | 上游衍生 | 2026-07-31 |
 | [api-enhanced](https://github.com/HP-Patience/api-enhanced) | **网易云音乐 API 的增强版服务。** 在上游基础上补齐接口与兼容层，为本地音乐类项目提供统一数据源。 | JavaScript · Node.js | 上游衍生 | 2026-06-09 |
-
-<details>
-<summary><b>Tools 的子项目（13 个）</b></summary>
-
-| 子项目 | 说明 | 技术栈 | 最近更新 |
-| --- | --- | --- | --- |
-| [dotfiles](https://github.com/HP-Patience/Tools/tree/main/dotfiles) | Linux 服务器的 Zsh 配置与一键安装脚本。 | Shell · Zsh | 2026-11-12 |
-| [ember-covenant-sanctuary](https://github.com/HP-Patience/Tools/tree/main/ember-covenant-sanctuary) | 《烬契圣堂》：高对比像素风俯视角动作肉鸽原型。 | Phaser 3 · JavaScript | 2026-11-07 |
-| [Dreamcore-Style-Transfer](https://github.com/HP-Patience/Tools/tree/main/Dreamcore-Style-Transfer) | 用 Pillow 做 10 种「核」风格的像素级处理。 | Python · Pillow | 2026-11-04 |
-| [Penrose-Staircase](https://github.com/HP-Patience/Tools/tree/main/Penrose-Staircase) | 生成第 n 阶彭罗斯不可能阶梯。 | Python | 2026-11-04 |
-| [tencent-server-seckill](https://github.com/HP-Patience/Tools/tree/main/tencent-server-seckill) | 腾讯云服务器抢购的本地控制台与命令行。 | Python · Playwright | 2026-11-04 |
-| [mailbox-reader](https://github.com/HP-Patience/Tools/tree/main/mailbox-reader) | 批量导入邮箱，按需读取收件箱。 | Python · Graph API | 2026-11-04 |
-| [QQBookExporter](https://github.com/HP-Patience/Tools/tree/main/QQBookExporter) | 导出在线章节为 Markdown / TXT，再打包 EPUB / PDF。 | Node.js | 2026-11-04 |
-| [Taskleaf-Kanban](https://github.com/HP-Patience/Tools/tree/main/Taskleaf-Kanban) | 四列任务看板，JSON 文件持久化。 | JavaScript · Vite · Express | 2026-11-04 |
-| [ai-subscription-manager](https://github.com/HP-Patience/Tools/tree/main/ai-subscription-manager) | AI 订阅客户、续费与利润记录，到期邮件提醒。 | React · FastAPI · SQLite | 2026-11-04 |
-| [danew_card_cdk](https://github.com/HP-Patience/Tools/tree/main/danew_card_cdk) | CDK 卡密兑换与自动开通。 | Go · Vue | 2026-11-04 |
-| [knowledge-map](https://github.com/HP-Patience/Tools/tree/main/knowledge-map) | Agent 整理、浏览器只读回看的个人知识地图。 | TypeScript · Vite | 2026-11-04 |
-| [GPT图像工坊](https://github.com/HP-Patience/Tools/tree/main/GPT%E5%9B%BE%E5%83%8F%E5%B7%A5%E5%9D%8A) | 输入提示词生成图片，支持参考图编辑与本地标注。 | Python · FastAPI | 2026-08-17 |
-| [LLM试金石](https://github.com/HP-Patience/Tools/tree/main/LLM%E8%AF%95%E9%87%91%E7%9F%B3) | 批量验证 OpenAI 兼容接口的模型连通性与耗时。 | HTML · JavaScript | 2026-07-22 |
-
-</details>
-
 
 ### 归档与资料 · Archive
 
@@ -171,4 +149,4 @@ Project_Hub/
 
 字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `repoUrl`（原仓库已删除或并入时，指向实际位置）`masked`（描述已隐藏）`statusOverride`（`fork` / `archived` / `merged` / `local`）`subprojects`（仓库内子项目，每项含 `name` `tagline` `stack` `updated`，页面上以二级视图展示，不再单列一级条目）。状态默认由 `updated` 推算。`visibility` 为 `private` 的项目必须设 `masked: true` 且清空 `tagline` / `desc`，页面上只显示「描述已隐藏」。
 
-<sub>生成时间 2026-11-12 14:30 · 数据来源 GitHub REST API 与本地工作区</sub>
+<sub>生成时间 2026-11-12 18:23 · 数据来源 GitHub REST API 与本地工作区</sub>

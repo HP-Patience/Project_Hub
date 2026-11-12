@@ -638,8 +638,8 @@
       "name": "Tools",
       "owner": "HP-Patience",
       "category": "infra",
-      "tagline": "十几个自用小工具收进一个仓库，各自独立运行。",
-      "desc": "每个工具保留自己的 README 与运行方式：静态页、Python 脚本、Node 服务、Go 后端与浏览器游戏原型并存，共享位置而不共享依赖。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Python",
         "JavaScript",
@@ -650,125 +650,8 @@
         "LLM 测试"
       ],
       "updated": "2026-11-12",
-      "subprojects": [
-        {
-          "name": "GPT图像工坊",
-          "tagline": "输入提示词生成图片，支持参考图编辑与本地标注。",
-          "stack": [
-            "Python",
-            "FastAPI"
-          ],
-          "updated": "2026-08-17"
-        },
-        {
-          "name": "LLM试金石",
-          "tagline": "批量验证 OpenAI 兼容接口的模型连通性与耗时。",
-          "stack": [
-            "HTML",
-            "JavaScript"
-          ],
-          "updated": "2026-07-22"
-        },
-        {
-          "name": "Dreamcore-Style-Transfer",
-          "tagline": "用 Pillow 做 10 种「核」风格的像素级处理。",
-          "stack": [
-            "Python",
-            "Pillow"
-          ],
-          "updated": "2026-11-04"
-        },
-        {
-          "name": "Penrose-Staircase",
-          "tagline": "生成第 n 阶彭罗斯不可能阶梯。",
-          "stack": [
-            "Python"
-          ],
-          "updated": "2026-11-04"
-        },
-        {
-          "name": "tencent-server-seckill",
-          "tagline": "腾讯云服务器抢购的本地控制台与命令行。",
-          "stack": [
-            "Python",
-            "Playwright"
-          ],
-          "updated": "2026-11-04"
-        },
-        {
-          "name": "mailbox-reader",
-          "tagline": "批量导入邮箱，按需读取收件箱。",
-          "stack": [
-            "Python",
-            "Graph API"
-          ],
-          "updated": "2026-11-04"
-        },
-        {
-          "name": "QQBookExporter",
-          "tagline": "导出在线章节为 Markdown / TXT，再打包 EPUB / PDF。",
-          "stack": [
-            "Node.js"
-          ],
-          "updated": "2026-11-04"
-        },
-        {
-          "name": "Taskleaf-Kanban",
-          "tagline": "四列任务看板，JSON 文件持久化。",
-          "stack": [
-            "JavaScript",
-            "Vite",
-            "Express"
-          ],
-          "updated": "2026-11-04"
-        },
-        {
-          "name": "ai-subscription-manager",
-          "tagline": "AI 订阅客户、续费与利润记录，到期邮件提醒。",
-          "stack": [
-            "React",
-            "FastAPI",
-            "SQLite"
-          ],
-          "updated": "2026-11-04"
-        },
-        {
-          "name": "danew_card_cdk",
-          "tagline": "CDK 卡密兑换与自动开通。",
-          "stack": [
-            "Go",
-            "Vue"
-          ],
-          "updated": "2026-11-04"
-        },
-        {
-          "name": "knowledge-map",
-          "tagline": "Agent 整理、浏览器只读回看的个人知识地图。",
-          "stack": [
-            "TypeScript",
-            "Vite"
-          ],
-          "updated": "2026-11-04"
-        },
-        {
-          "name": "ember-covenant-sanctuary",
-          "tagline": "《烬契圣堂》：高对比像素风俯视角动作肉鸽原型。",
-          "stack": [
-            "Phaser 3",
-            "JavaScript"
-          ],
-          "updated": "2026-11-07"
-        },
-        {
-          "name": "dotfiles",
-          "tagline": "Linux 服务器的 Zsh 配置与一键安装脚本。",
-          "stack": [
-            "Shell",
-            "Zsh"
-          ],
-          "updated": "2026-11-12"
-        }
-      ]
+      "visibility": "private",
+      "masked": true
     },
     {
       "name": "open_shuncode",
