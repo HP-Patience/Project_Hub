@@ -639,7 +639,7 @@
       "owner": "HP-Patience",
       "category": "infra",
       "tagline": "十几个自用小工具收进一个仓库，各自独立运行。",
-      "desc": "每个工具保留自己的 README 与运行方式：静态页、Python 脚本、Node 服务、Go 后端与浏览器游戏原型并存，共享位置而不共享依赖。点开二级视图可以逐个查看。",
+      "desc": "每个工具保留自己的 README 与运行方式：静态页、Python 脚本、Node 服务、Go 后端与浏览器游戏原型并存，共享位置而不共享依赖。",
       "stack": [
         "Python",
         "JavaScript",

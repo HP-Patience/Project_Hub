@@ -108,7 +108,7 @@
 
 | 项目 | 说明 | 技术栈 | 状态 | 最近更新 |
 | --- | --- | --- | --- | --- |
-| [Tools](https://github.com/HP-Patience/Tools) | **十几个自用小工具收进一个仓库，各自独立运行。** 每个工具保留自己的 README 与运行方式：静态页、Python 脚本、Node 服务、Go 后端与浏览器游戏原型并存，共享位置而不共享依赖。点开二级视图可以逐个查看。 内含 13 个[子项目](https://github.com/HP-Patience/Tools)，见下表 | Python · JavaScript · Go | 活跃 | 2026-11-12 |
+| [Tools](https://github.com/HP-Patience/Tools) | **十几个自用小工具收进一个仓库，各自独立运行。** 每个工具保留自己的 README 与运行方式：静态页、Python 脚本、Node 服务、Go 后端与浏览器游戏原型并存，共享位置而不共享依赖。 内含 13 个[子项目](https://github.com/HP-Patience/Tools)，见下表 | Python · JavaScript · Go | 活跃 | 2026-11-12 |
 | open_shuncode | （描述已隐藏） | TypeScript · Code-OSS · MCP | 活跃 · 私有 | 2026-11-04 |
 | cc-connect | （描述已隐藏） | Go · MCP | 维护中 · 私有 | 2026-09-16 |
 | [github-readme-stats](https://github.com/HP-Patience/github-readme-stats) | **README 统计卡片的自建实例。** 上游项目的个人部署副本，用于在主页 README 中生成动态统计图，保持数据自持。 | JavaScript · Vercel | 上游衍生 | 2026-07-31 |
@@ -171,4 +171,4 @@ Project_Hub/
 
 字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `repoUrl`（原仓库已删除或并入时，指向实际位置）`masked`（描述已隐藏）`statusOverride`（`fork` / `archived` / `merged` / `local`）`subprojects`（仓库内子项目，每项含 `name` `tagline` `stack` `updated`，页面上以二级视图展示，不再单列一级条目）。状态默认由 `updated` 推算。`visibility` 为 `private` 的项目必须设 `masked: true` 且清空 `tagline` / `desc`，页面上只显示「描述已隐藏」。
 
-<sub>生成时间 2026-11-12 14:18 · 数据来源 GitHub REST API 与本地工作区</sub>
+<sub>生成时间 2026-11-12 14:30 · 数据来源 GitHub REST API 与本地工作区</sub>
