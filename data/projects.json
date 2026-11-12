@@ -306,8 +306,8 @@
       "name": "ink-bongocat-live2d",
       "owner": "HP-Patience",
       "category": "creative",
-      "tagline": "BongoCat 桌宠运行时：C + SDL3 + OpenGL 的原生窗口。",
-      "desc": "跟随键鼠输入做互动的轻量桌宠应用，自带演示模型；自定义模型资产（Ruotengwu，后改名 InkKeys）已迁至 ink-live2d，本仓保留应用本体。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "C",
         "SDL3",
@@ -319,7 +319,8 @@
         "运行时"
       ],
       "updated": "2026-11-02",
-      "visibility": "private"
+      "visibility": "private",
+      "masked": true
     },
     {
       "name": "LocalMediaSearch",
@@ -537,8 +538,8 @@
       "name": "frontend-awesome-collection",
       "owner": "HP-Patience",
       "category": "web",
-      "tagline": "优秀前端作品的收藏与复刻实践。",
-      "desc": "收录网站、交互组件与视觉动效，附设计拆解笔记与可运行复刻版本。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "HTML",
         "CSS",
@@ -550,7 +551,8 @@
         "动效"
       ],
       "updated": "2026-11-08",
-      "visibility": "private"
+      "visibility": "private",
+      "masked": true
     },
     {
       "name": "English_Context",
@@ -637,8 +639,8 @@
       "name": "mao-probability-statistics",
       "owner": "HP-Patience",
       "category": "learning",
-      "tagline": "以茆诗松教材为主线的概率统计学习记录。",
-      "desc": "按定义、定理、证明与习题跟踪掌握程度，配合复习进度表。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Python",
         "Markdown"
@@ -648,7 +650,8 @@
         "教材"
       ],
       "updated": "2026-10-25",
-      "visibility": "private"
+      "visibility": "private",
+      "masked": true
     },
     {
       "name": "Tools",
@@ -688,8 +691,8 @@
       "name": "open_shuncode",
       "owner": "HP-Patience",
       "category": "infra",
-      "tagline": "基于 Code-OSS 的 AI 编辑器，附带远程 MCP 桥接。",
-      "desc": "支持原生智能体与多模型协作，并让网页端 AI 通过 MCP 操作本地项目。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "TypeScript",
         "Code-OSS",
@@ -701,7 +704,8 @@
         "Agent"
       ],
       "updated": "2026-11-04",
-      "visibility": "private"
+      "visibility": "private",
+      "masked": true
     },
     {
       "name": "github-readme-stats",
@@ -743,8 +747,8 @@
       "name": "Project_Data_Archive",
       "owner": "HP-Patience",
       "category": "archive",
-      "tagline": "项目数据与实验资料的私有归档仓。",
-      "desc": "整理 EEG、眼动、皮电、图数据与机器学习等研究数据，按项目归档，不对外公开。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Jupyter Notebook",
         "Archive"
@@ -755,14 +759,15 @@
         "私有"
       ],
       "updated": "2026-11-12",
-      "visibility": "private"
+      "visibility": "private",
+      "masked": true
     },
     {
       "name": "obsidian-kaoyan",
       "owner": "HP-Patience",
       "category": "archive",
-      "tagline": "考研向 Obsidian vault，含笔记与附件。",
-      "desc": "545 MB / 10,422 文件的主 vault，笔记与附件混存，尚未完成瘦身与 LFS 迁移。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Markdown",
         "Obsidian"
@@ -773,14 +778,15 @@
         "本地"
       ],
       "updated": "2026-08-31",
-      "visibility": "private"
+      "visibility": "private",
+      "masked": true
     },
     {
       "name": "obsidian-config",
       "owner": "HP-Patience",
       "category": "archive",
-      "tagline": "Obsidian 配置快照：插件、主题与工作区布局。",
-      "desc": "只备份 .obsidian 目录，不含笔记与附件，用于快速还原编辑环境。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "JSON",
         "Obsidian"
@@ -791,14 +797,15 @@
         "本地"
       ],
       "updated": "2026-09-01",
-      "visibility": "private"
+      "visibility": "private",
+      "masked": true
     },
     {
       "name": "folia-major",
       "owner": "HP-Patience",
       "category": "archive",
-      "tagline": "Folia 音乐播放器的本地副本（上游参考）。",
-      "desc": "歌词与播放体验做得较完整的上游项目，本地保留用于界面与交互参考。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "TypeScript"
       ],
@@ -807,14 +814,15 @@
         "音乐"
       ],
       "updated": "2026-10-05",
-      "visibility": "private"
+      "visibility": "private",
+      "masked": true
     },
     {
       "name": "localtypeless",
       "owner": "HP-Patience",
       "category": "productivity",
-      "tagline": "轻触右 Alt 说话，松开即上屏。",
-      "desc": "Windows 本地语音输入：录音转写后交给本地语言模型整理、翻译或改写，全流程不依赖云端。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Python",
         "Whisper"
@@ -825,14 +833,15 @@
         "Windows"
       ],
       "visibility": "private",
-      "updated": "2026-11-04"
+      "updated": "2026-11-04",
+      "masked": true
     },
     {
       "name": "blog-firefly",
       "owner": "HP-Patience",
       "category": "web",
-      "tagline": "Astro + Firefly 主题的个人博客源码。",
-      "desc": "记录技术实践、学习笔记与日常，内容与构建分离，静态产物走 CI 部署。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Astro",
         "TypeScript"
@@ -842,14 +851,15 @@
         "Astro"
       ],
       "visibility": "private",
-      "updated": "2026-11-11"
+      "updated": "2026-11-11",
+      "masked": true
     },
     {
       "name": "undergrad-thesis-crw",
       "owner": "HP-Patience",
       "category": "learning",
-      "tagline": "LoRA 微调的中文金融情感分类本科论文。",
-      "desc": "在 FinFE 数据集上比较传统机器学习、BERT/RoBERTa 与 Qwen/GLM 微调的效果与成本。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Python",
         "PyTorch",
@@ -861,14 +871,15 @@
         "微调"
       ],
       "visibility": "private",
-      "updated": "2026-11-01"
+      "updated": "2026-11-01",
+      "masked": true
     },
     {
       "name": "mit-math-study",
       "owner": "HP-Patience",
       "category": "learning",
-      "tagline": "MIT 数学课程的导航与进度同步。",
-      "desc": "面向中文学习者整理微积分、线性代数、概率统计的课程索引与学习记录。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Markdown"
       ],
@@ -877,14 +888,15 @@
         "课程"
       ],
       "visibility": "private",
-      "updated": "2026-09-18"
+      "updated": "2026-09-18",
+      "masked": true
     },
     {
       "name": "cc-connect",
       "owner": "HP-Patience",
       "category": "infra",
-      "tagline": "把本地 AI 编程助手接到聊天平台。",
-      "desc": "个人部署分支：连接本地 Agent 与 Telegram 等平台，包含回复修复与 Codex 桌面任务兼容改进。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Go",
         "MCP"
@@ -895,14 +907,15 @@
         "Agent"
       ],
       "visibility": "private",
-      "updated": "2026-09-16"
+      "updated": "2026-09-16",
+      "masked": true
     },
     {
       "name": "drumbeat-desktop",
       "owner": "HP-Patience",
       "category": "productivity",
-      "tagline": "架子鼓培训机构的本地优先管理系统：招生、排课、点名课消与收银对账共用一份数据。",
-      "desc": "浏览器打开即用，需要多端协同时启动零依赖本地服务，局域网内实时同步，数据存 SQLite 单文件。点名一次同时更新课次状态、学员余额、课消统计与老师课时，并提供单文件 exe。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "JavaScript",
         "Electron",
@@ -914,14 +927,15 @@
         "桌面应用"
       ],
       "visibility": "private",
-      "updated": "2026-11-05"
+      "updated": "2026-11-05",
+      "masked": true
     },
     {
       "name": "personal-workbench",
       "owner": "HP-Patience",
       "category": "ai",
-      "tagline": "本地优先的 AI 写作与研究工作台：资料附加与写盘每一步都由你确认。",
-      "desc": "Electron + React 前端配本机 FastAPI 服务，可接 OpenAI 兼容端点或本机 llama.cpp，密钥由 DPAPI 保护，数据留在本机 SQLite。上传与附加分离、写入逐次授权，未接入的能力明确标为不可用。",
+      "tagline": "",
+      "desc": "",
       "stack": [
         "Python",
         "FastAPI",
@@ -934,7 +948,8 @@
         "研究"
       ],
       "visibility": "private",
-      "updated": "2026-11-09"
+      "updated": "2026-11-09",
+      "masked": true
     },
     {
       "name": "ayakaleaf-pro",

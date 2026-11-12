@@ -66,6 +66,8 @@ def load() -> dict:
         override = p.get("statusOverride")
         if override and override not in STATUS_LABEL:
             fail(f"项目 {p['name']} 的 statusOverride 非法：{override}")
+        if p.get("visibility") == "private" and not p.get("masked"):
+            fail(f"私有项目 {p['name']} 必须设 masked: true，并清空 tagline/desc，避免描述外泄")
     return data
 
 
@@ -150,7 +152,7 @@ def build_readme(data: dict, today: date, now: str) -> None:
 
 {chr(10).join(overview)}
 
-状态说明：**活跃** 14 天内推送 · **维护中** 90 天内 · **暂缓** 超过 90 天 · **上游衍生** 基于他人项目二次开发 · **已并入** 代码已迁入其他仓库 · **已归档** 停止维护。标 **私有** 的仓库不公开，索引中不提供链接。
+状态说明：**活跃** 14 天内推送 · **维护中** 90 天内 · **暂缓** 超过 90 天 · **上游衍生** 基于他人项目二次开发 · **已并入** 代码已迁入其他仓库 · **已归档** 停止维护。标 **私有** 的仓库不公开，索引中不提供链接，描述一律显示为「描述已隐藏」。
 {chr(10).join(rows)}
 
 ---
@@ -172,7 +174,7 @@ Project_Hub/
 2. 运行 `python build.py` 重新生成页面与 README。
 3. 提交并推送，Pages 自动更新。
 
-字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `repoUrl`（原仓库已删除或并入时，指向实际位置）`statusOverride`（`fork` / `archived` / `merged` / `local`）。状态默认由 `updated` 推算。
+字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `repoUrl`（原仓库已删除或并入时，指向实际位置）`masked`（描述已隐藏）`statusOverride`（`fork` / `archived` / `merged` / `local`）。状态默认由 `updated` 推算。`visibility` 为 `private` 的项目必须设 `masked: true` 且清空 `tagline` / `desc`，页面上只显示「描述已隐藏」。
 
 <sub>生成时间 {now} · 数据来源 GitHub REST API 与本地工作区</sub>
 """
