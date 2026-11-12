@@ -126,7 +126,7 @@
   .status[data-s="maintained"]{color:var(--blue)}
   .status[data-s="paused"]{color:var(--amber)}
   .status[data-s="fork"]{color:var(--violet)}
-  .status[data-s="archived"],.status[data-s="local"]{color:var(--gray)}
+  .status[data-s="archived"],.status[data-s="merged"],.status[data-s="local"]{color:var(--gray)}
   .owner{color:var(--dim);letter-spacing:.02em}
   .vis{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:var(--amber);
     border:1px solid rgba(240,184,102,.32);background:rgba(240,184,102,.07);
@@ -274,11 +274,11 @@ function statusOf(p){
 }
 const STATUS_LABEL = {
   active:"活跃", maintained:"维护中", paused:"暂缓",
-  fork:"上游衍生", archived:"已归档", local:"仅本地"
+  fork:"上游衍生", archived:"已归档", merged:"已并入", local:"仅本地"
 };
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const urlOf = p => (p.visibility === "private" || p.statusOverride === "local")
-  ? "" : `https://github.com/${p.owner}/${p.name}`;
+  ? "" : (p.repoUrl || `https://github.com/${p.owner}/${p.name}`);
 
 PROJECTS.forEach(p => { p._s = statusOf(p); });
 

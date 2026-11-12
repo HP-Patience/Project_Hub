@@ -24,6 +24,7 @@ STATUS_LABEL = {
     "paused": "暂缓",
     "fork": "上游衍生",
     "archived": "已归档",
+    "merged": "已并入",
     "local": "仅本地",
 }
 REPO_URL = "https://github.com/{owner}/{name}"
@@ -109,7 +110,8 @@ def build_readme(data: dict, today: date, now: str) -> None:
         for p in items:
             name = p["name"]
             if p.get("statusOverride") != "local" and p.get("visibility") != "private":
-                name = f"[{name}]({REPO_URL.format(owner=p['owner'], name=p['name'])})"
+                href = p.get("repoUrl") or REPO_URL.format(owner=p["owner"], name=p["name"])
+                name = f"[{name}]({href})"
             stack = " · ".join(p["stack"]) if p["stack"] else "—"
             state = STATUS_LABEL[status_of(p, today)]
             if p.get("visibility") == "private":
@@ -148,7 +150,7 @@ def build_readme(data: dict, today: date, now: str) -> None:
 
 {chr(10).join(overview)}
 
-状态说明：**活跃** 14 天内推送 · **维护中** 90 天内 · **暂缓** 超过 90 天 · **上游衍生** 基于他人项目二次开发 · **已归档** 停止维护。标 **私有** 的仓库不公开，索引中不提供链接。
+状态说明：**活跃** 14 天内推送 · **维护中** 90 天内 · **暂缓** 超过 90 天 · **上游衍生** 基于他人项目二次开发 · **已并入** 代码已迁入其他仓库 · **已归档** 停止维护。标 **私有** 的仓库不公开，索引中不提供链接。
 {chr(10).join(rows)}
 
 ---
@@ -170,7 +172,7 @@ Project_Hub/
 2. 运行 `python build.py` 重新生成页面与 README。
 3. 提交并推送，Pages 自动更新。
 
-字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `statusOverride`（`fork` / `archived` / `local`）。状态默认由 `updated` 推算。
+字段约定：`name` `owner` `category` `tagline`（一句话）`desc`（两三句）`stack` `tags` `updated`；可选 `homepage` `featured` `repoUrl`（原仓库已删除或并入时，指向实际位置）`statusOverride`（`fork` / `archived` / `merged` / `local`）。状态默认由 `updated` 推算。
 
 <sub>生成时间 {now} · 数据来源 GitHub REST API 与本地工作区</sub>
 """
